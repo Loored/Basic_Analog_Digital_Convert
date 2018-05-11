@@ -9,11 +9,14 @@
 #use fast_io(d)   //Se emplea la directiva de Fast_io
 
 
-long valorDecimal1 = 0, valorDecimal2 = 0; //Variables a usar en nuestros puertos
+#define TX_232        PIN_C6 
+#define RX_232        PIN_C7
+#use RS232(BAUD=9600, XMIT=TX_232, RCV=RX_232, BITS=8, PARITY=N, STOP=1)
+long valorDecimal = 0, valorDecimal2 = 0; //Variables a usar en nuestros puertos
 void main(void) //Programa principal
 {
    setup_oscillator(OSC_16MHZ); //Configuramos nuestro oscillador a 16MHZ
-   setup_adc(ADC_CLOCK_INTERNAL);
+   setup_adc(ADC_CLOCK_INTERNAL); //Configurar el uso del reloj interno 
    set_tris_b(0x00); //Declaramos nuestros puertos en modo salida
    set_tris_c(0x00); //Declaramos nuestros puertos en modo salida 
    set_tris_d(0x00); //Declaramos nuestros puertos en modo salida
@@ -21,8 +24,9 @@ void main(void) //Programa principal
    while(1) //Abrimos un ciclo infinito
    {
       set_adc_channel(0); //Puerto AN0 como transmisor
-      valorDecimal1 = read_adc(); //Leemos el valor en AN0
+      valorDecimal = read_adc(); //Leemos el valor en AN0
       set_adc_channel(1); //Puerto AN1 como transmisor
       valorDecimal2 = read_adc(); //Leemos el valor en AN1
+      printf("Valores %f, %f", (float)valorDecimal, (float)valorDecimal2);
    }
 }
