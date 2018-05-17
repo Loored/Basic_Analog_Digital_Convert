@@ -115,4 +115,16 @@ int barraPot2(int ledPot2)
 }
 
 
+//void interrupcion_AD(void) //Funcion de nuestra interrupcion
+//{
+//	if(lecturaPot1 == 1) 
+//	{
+//		resultadoUno = read_adc(ADC_READ_ONLY); //Se lee el resultado 
+//	}
+//	if(lecturaPot2 == 1)
+//	{
+//		resultadoDos = read_adcc(ADC_READ_ONLY);
+//	}
+//	read_adc(ADC_START_ONLY); //Configuracion para leer valores adc 
+//	break;
 //}
