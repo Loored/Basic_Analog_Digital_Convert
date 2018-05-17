@@ -51,43 +51,43 @@ void main(void) //Programa principal
 
 int rangoFinal (int rango)
 {
-	if(rango >= 0 && rango <= 100)
+	if(conversionUno >= 0 && conversionUno <= 100)
 	{
 		rango = 1;
 	}
-	if(rango >= 101 && rango <= 200)
+	if(conversionUno >= 101 && conversionUno <= 200)
 	{
 		rango = 2;
 	}
-	if(rango >= 201 && rango <= 300)
+	if(conversionUno >= 201 && conversionUno <= 300)
 	{
 		rango = 4;
 	}
-	if(rango >= 301 && rango <= 400)
+	if(conversionUno >= 301 && conversionUno <= 400)
 	{
 		rango = 8;
 	}
-	if(rango >= 401 && rango <= 500)
+	if(conversionUno >= 401 && conversionUno <= 500)
 	{
 		rango = 16;
 	}
-	if(rango >= 501 && rango <= 600)
+	if(rango >= 501 && conversionUno <= 600)
 	{
 		rango = 32;
 	}
-	if(rango >= 601 && rango <= 700)
+	if(rango >= 601 && conversionUno <= 700)
 	{
 		rango = 64;
 	}
-	if(rango >= 701 && rango <= 800)
+	if(rango >= 701 && conversionUno <= 800)
 	{
 		rango = 128;
 	}
-	if(rango >= 800 && rango <= 899)
+	if(rango >= 800 && conversionUno <= 899)
 	{
 		rango = 256;
 	}
-	if(rango >= 990 && rango <= 1023)
+	if(conversionUno >= 990 && conversionUno <= 1023)
 	{
 		rango = 512;
 	}
